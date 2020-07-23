@@ -15,8 +15,8 @@ import { Counter } from './Counter';
 
   return (
     <div className="App">
-        <Counter addCountre={addCounter}
-                 countre={counter}
+        <Counter addCounter={addCounter}
+                 counter={counter}
                  reset={reset}
         />
     </div>

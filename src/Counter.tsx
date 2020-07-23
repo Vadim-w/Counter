@@ -1,18 +1,20 @@
 import React from 'react';
-import { Buttons } from './Buttons';
+import {Buttons} from './Buttons';
 import {Screen} from "./Screen";
 
-type cotreType = {
-    addCountre: () => void
-    countre: number
+type counterType = {
+    addCounter: () => void
+    counter: number
     reset: () => void
 }
 
-export const Counter: React.FC<cotreType> = (props) => {
-    return(
-        <div className={"counter"}>
-            <Buttons addCounter={props.addCountre} reset={props.reset} countre={props.countre}/>
-            <Screen countre={props.countre}/>
+export const Counter: React.FC<counterType> = (props) => {
+    return (<div className={"commonBlock"}>
+            <div className={"settingsBlock"}></div>
+            <div className={"counter"}>
+                <Buttons addCounter={props.addCounter} reset={props.reset} countre={props.counter}/>
+                <Screen countre={props.counter}/>
+            </div>
         </div>
     )
 }

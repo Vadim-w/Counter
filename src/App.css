@@ -1,5 +1,15 @@
 .App {
   text-align: center;
+
+
+}
+
+.commonBlock{
+  border: 2px red solid;
+  width: 700px;
+  height: 350px;
+  position: relative;
+  margin: 100px auto;
 }
 
 .App-logo {
@@ -42,13 +52,15 @@ body{
 }
 
 .counter {
-  border: 2px #3ac0ff solid ;
+  border: 2px #3ac0ff solid;
   width: 300px;
   height: 300px;
-  margin: 0 auto;
   border-radius: 10px;
+  display: inline-block;
+  margin-top: 20px;
   position: fixed;
 }
+
 .screen {
   width: 250px;
   height: 100px;
@@ -100,6 +112,18 @@ body{
   background-color: #3ac0ff ;
   border-radius: 10px;
   font-size: 30px;
+}
+
+.settingsBlock{
+  border: 2px #3ac0ff solid ;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  border-radius: 10px;
+  display: inline-block;
+  margin-right: 40px;
+  margin-top: 20px;
+  margin-left: 10px;
 }
 
 
