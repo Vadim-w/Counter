@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './App.css';
-import { Counter } from './Counter';
+import { Counter } from './CounterBlock/Counter';
 
  function App() {
     let [counter, setCounter] = useState(0)

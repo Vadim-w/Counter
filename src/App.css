@@ -52,13 +52,15 @@ body{
 }
 
 .counter {
-  border: 2px #3ac0ff solid;
   width: 300px;
   height: 300px;
+  border: 2px #3ac0ff solid;
   border-radius: 10px;
   display: inline-block;
   margin-top: 20px;
-  position: fixed;
+  margin-left: -140px;
+  float: right;
+  position: relative;
 }
 
 .screen {
@@ -66,7 +68,6 @@ body{
   height: 100px;
   border: 2px #3ac0ff solid;
   border-radius: 10px;
-  position: static;
   margin-top: -250px;
   margin-left: 20px;
   background-color: #3ac0ff;
@@ -115,15 +116,27 @@ body{
 }
 
 .settingsBlock{
-  border: 2px #3ac0ff solid ;
   width: 300px;
   height: 300px;
-  margin: 0 auto;
+  border: 2px #3ac0ff solid ;
   border-radius: 10px;
   display: inline-block;
   margin-right: 40px;
   margin-top: 20px;
   margin-left: 10px;
+  float: left;
 }
+
+.settingsScreen{
+  width: 250px;
+  height: 100px;
+  border: 2px #3ac0ff solid;
+  border-radius: 10px;
+  margin-top: -230px;
+  background-color: #3ac0ff;
+
+}
+
+
 
 

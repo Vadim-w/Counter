@@ -1,13 +1,13 @@
 import React from 'react';
 
 type screenType = {
-    countre: number
+    counter: number
 }
 
 export const Screen:React.FC<screenType> = (props) => {
     return(
-        <div className={props.countre === 5? "screen-block": "screen"} >
-            {props.countre}
+        <div className={props.counter === 5? "screen-block": "screen"} >
+            {props.counter}
         </div>
     )
 }
