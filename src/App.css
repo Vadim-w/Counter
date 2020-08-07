@@ -5,7 +5,6 @@
 }
 
 .commonBlock{
-  border: 2px red solid;
   width: 700px;
   height: 350px;
   position: relative;
@@ -48,13 +47,13 @@
 }
 
 body{
-  background-color: darkblue;
+  background-color: cornflowerblue;
 }
 
 .counter {
   width: 300px;
   height: 300px;
-  border: 2px #3ac0ff solid;
+  border: 3px  black solid;
   border-radius: 10px;
   display: inline-block;
   margin-top: 20px;
@@ -66,7 +65,7 @@ body{
 .screen {
   width: 250px;
   height: 100px;
-  border: 2px #3ac0ff solid;
+  border: 2px black solid;
   border-radius: 10px;
   margin-top: -250px;
   margin-left: 20px;
@@ -77,12 +76,12 @@ body{
 .screen-block {
   width: 250px;
   height: 100px;
-  border: 2px #3ac0ff solid;
+  border: 2px black solid;
   border-radius: 10px;
   position: static;
   margin-top: -250px;
   margin-left: 20px;
-  background-color: #3ac0ff;
+  background-color: blue;
   font-size: 50px;
   color: red;
   font-weight: bold;
@@ -92,10 +91,14 @@ body{
 .buttons {
   width: 250px;
   height: 100px;
-  border: 2px #3ac0ff solid;
+  border: 2px black solid;
   margin-top: 180px;
   margin-left: 20px;
   border-radius: 10px;
+}
+
+.buttonSettings {
+  margin-top: 60px;
 }
 
 .reset {
@@ -110,7 +113,7 @@ body{
 .ins {
   width: 100px;
   height: 50px;
-  background-color: #3ac0ff ;
+  background-color: black ;
   border-radius: 10px;
   font-size: 30px;
 }
@@ -118,7 +121,7 @@ body{
 .settingsBlock{
   width: 300px;
   height: 300px;
-  border: 2px #3ac0ff solid ;
+  border: 3px black solid ;
   border-radius: 10px;
   display: inline-block;
   margin-right: 40px;
@@ -130,9 +133,11 @@ body{
 .settingsScreen{
   width: 250px;
   height: 100px;
-  border: 2px #3ac0ff solid;
+  border: 2px black solid;
   border-radius: 10px;
-  margin-top: -230px;
+  margin-top: 30px;
+  margin-left: 20px;
+  position: center;
   background-color: #3ac0ff;
 
 }

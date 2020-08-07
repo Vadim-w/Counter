@@ -1,26 +1,35 @@
-import React, {useState} from 'react';
+import React, {ChangeEvent, useState} from 'react';
 import './App.css';
-import { Counter } from './CounterBlock/Counter';
+import {Counter} from './CounterBlock/Counter';
 
- function App() {
+function App() {
     let [counter, setCounter] = useState(0)
+    let [maxValue, setMaxValue] = useState(0)
 
-     function addCounter() {
-
-        setCounter(counter+1)
+    function addCounter() {
+        setCounter(counter + 1)
     }
     function reset() {
         setCounter(0)
     }
 
-  return (
-    <div className="App">
-        <Counter addCounter={addCounter}
-                 counter={counter}
-                 reset={reset}
-        />
-    </div>
-  );
+    function applySettings(start: number, max: number) {
+        debugger;
+        setCounter(start)
+        setMaxValue(max)
+
+    }
+
+    return (
+        <div className="App">
+            <Counter addCounter={addCounter}
+                     counter={counter}
+                     reset={reset}
+                     applySettings={applySettings}
+                     maxValue={maxValue}
+            />
+        </div>
+    );
 }
 
 export default App;
