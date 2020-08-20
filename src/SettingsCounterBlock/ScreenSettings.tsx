@@ -1,35 +1,40 @@
-import React, {ChangeEvent, useState} from 'react';
+import React, {ChangeEvent} from 'react';
 import {Button} from "../Common/Button";
+import styles from './ScreenSettings.module.css'
 
 type ScreenSettingsPropsType = {
-    applySettings: (start: number, max: number) => void
+    applySettings: () => void
+    error: boolean
+    changeStartValue: (value: string) => void
+    changeMaxValue: (value: string) => void
+    startValue: string
+    maxValue: string
+    counter: number
 }
 
 export const ScreenSettings = (props:ScreenSettingsPropsType) => {
 
-    let [startValue, setStartValue] = useState("0")
-    let [maxValue, setMaxValue] = useState("0")
 
     function onChangeStartValue(e: ChangeEvent<HTMLInputElement>) {
-        setStartValue(e.currentTarget.value)
+        props.changeStartValue(e.currentTarget.value)
     }
 
     function onChangeMaxValue(e: ChangeEvent<HTMLInputElement>) {
-        setMaxValue(e.currentTarget.value)
-    }
-
-    function applySettings() {
-        if(startValue.trim() && maxValue.trim()) {
-            props.applySettings(Number(startValue), Number(maxValue))
-        }
+        props.changeMaxValue(e.currentTarget.value)
     }
 
     return (
         <div className={"settingsScreen"}>
-            <div className={"maxValue"}>Start value: <input value={startValue} onChange={onChangeStartValue} type='number'/></div>
-            <div className={"startValue"}>Max value: <input value={maxValue} onChange={onChangeMaxValue} type='number' /></div>
+            <div>Start value:
+                <input className={+(props.startValue) < 0 || +(props.startValue) >= +(props.maxValue) ? styles.startValueError : ""}
+                       value={props.startValue} onChange={onChangeStartValue} type='number'/>
+            </div>
+            <div>Max value:
+                <input className={+(props.maxValue) < 0 || +(props.startValue) >= +(props.maxValue) ? styles.maxValueError : ""}
+                       value={props.maxValue} onChange={onChangeMaxValue} type='number' />
+            </div>
             <div className={"buttonSettings"}>
-                <Button title={"set"} onClickHandler={applySettings} disabled={false}/>
+                <Button title={"set"} onClickHandler={props.applySettings} disabled={ props.counter > +(props.startValue)}/>
             </div>
         </div>
     )

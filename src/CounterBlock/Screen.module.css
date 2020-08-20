@@ -1,0 +1,33 @@
+.screen {
+    width: 250px;
+    height: 100px;
+    border: 2px black solid;
+    border-radius: 10px;
+    position: static;
+    margin-top: -250px;
+    margin-left: 20px;
+    background-color: #3ac0ff;
+    font-size: 50px;
+    font-weight: bold;
+}
+.screenBlock {
+    width: 250px;
+    height: 100px;
+    border: 2px black solid;
+    border-radius: 10px;
+    position: static;
+    margin-top: -250px;
+    margin-left: 20px;
+    background-color: blue;
+    font-size: 50px;
+    color: red;
+    font-weight: bold;
+
+}
+
+.correctValue {
+    font-size: 17px;
+    color: red;
+    position: relative;
+    margin-bottom: 10px;
+}

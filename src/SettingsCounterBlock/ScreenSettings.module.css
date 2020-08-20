@@ -1,0 +1,9 @@
+.maxValueError {
+    border-color: red;
+    background-color: rgba(255, 0, 0, 0.6);
+}
+
+.startValueError {
+    border-color: red;
+    background-color: rgba(255, 0, 0, 0.6);
+}
