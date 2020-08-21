@@ -16,7 +16,7 @@ export const Screen:React.FC<screenType> = (props) => {
                 ? <span className={styles.correctValue}>incorrect value!</span>
                 : props.settingsOn
                     ? props.counter
-                    : <span className={styles.correctValue}>enter values and press 'set</span>
+                    : <span className={styles.correctValue}>enter values and press 'set'</span>
             }
         </div>
     )

@@ -28,6 +28,7 @@ export const Counter: React.FC<counterType> = (props) => {
                     startValue={props.startValue}
                     maxValue={props.maxValue}
                     counter={props.counter}
+                    settingsOn={props.settingsOn}
                 />
                 </div>
 
@@ -36,6 +37,7 @@ export const Counter: React.FC<counterType> = (props) => {
                 <Buttons addCounter={props.addCounter}
                          reset={props.reset}
                          counter={props.counter}
+                         settingsOn={props.settingsOn}
                          maxValue={props.maxValue}/>
                 <Screen counter={props.counter}
                         maxValue={props.maxValue}

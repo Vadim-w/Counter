@@ -10,6 +10,7 @@ type ScreenSettingsPropsType = {
     startValue: string
     maxValue: string
     counter: number
+    settingsOn: boolean
 }
 
 export const ScreenSettings = (props:ScreenSettingsPropsType) => {
@@ -34,7 +35,9 @@ export const ScreenSettings = (props:ScreenSettingsPropsType) => {
                        value={props.maxValue} onChange={onChangeMaxValue} type='number' />
             </div>
             <div className={"buttonSettings"}>
-                <Button title={"set"} onClickHandler={props.applySettings} disabled={ props.counter > +(props.startValue)}/>
+                <Button title={"set"}
+                        onClickHandler={props.applySettings}
+                        disabled={ props.counter > +(props.startValue) || +(props.startValue) >= +(props.maxValue) || props.settingsOn}/>
             </div>
         </div>
     )
