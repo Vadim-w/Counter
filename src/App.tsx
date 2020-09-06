@@ -53,7 +53,7 @@ function App() {
     const addCounter = () => {
         setCounter(counter + 1)
     }
-    const reset = () => {
+    const resetCounter = () => {
         setCounter(0)
         setSettingsOn(false)
     }
@@ -71,7 +71,7 @@ function App() {
         <div className="App">
             <Counter addCounter={addCounter}
                      counter={counter}
-                     reset={reset}
+                     reset={resetCounter}
                      applySettings={applySettings}
                      startValue={startValue}
                      maxValue={maxValue}
